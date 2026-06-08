@@ -2,16 +2,17 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Main Player Engine -->
+  <!-- 1. Main Player Engine (DO NOT CHANGE) -->
   <script src="https://jsdelivr.net"></script>
-  <!-- Modern HLS Live Stream Engine Plugin -->
-  <script src="https://live-manifest.production-public.tubi.io/live/6035c7fd-efff-4ec7-93dc-aa0c7a58ba47/playlist.m3u8"></script>
+  <!-- 2. HLS Live Stream Engine Plugin (DO NOT CHANGE) -->
+  <script src="https://jsdelivr.net"></script>
 </head>
 <body style="margin:0; padding:0; background:#000; overflow:hidden;">
   <div id="player" style="width:100vw; height:100vh;"></div>
   <script>
     var player = new Clappr.Player({
-      source: "https://roku.com",
+      // 3. YOUR WORKING LIVE STREAM LINK GOES HERE
+      source: "https://tubi.io",
       parentId: "#player",
       plugins: [HlsjsPlayback],
       playback: {
