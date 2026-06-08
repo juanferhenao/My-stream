@@ -2,6 +2,9 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Main Player Engine -->
+  <script src="https://jsdelivr.net"></script>
+  <!-- Modern HLS Live Stream Engine Plugin -->
   <script src="https://jsdelivr.net"></script>
 </head>
 <body style="margin:0; padding:0; background:#000; overflow:hidden;">
@@ -10,8 +13,14 @@
     var player = new Clappr.Player({
       source: "https://roku.com",
       parentId: "#player",
+      plugins: [HlsjsPlayback],
+      playback: {
+        hlsjsConfig: {
+          enableWorker: true
+        }
+      },
       autoPlay: true,
-      mute: false,
+      mute: true,
       width: '100%',
       height: '100%'
     });
